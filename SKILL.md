@@ -5,18 +5,21 @@ tier: FULL
 tags: [productivity, workflow, planning, debugging, testing, react, nextjs, supabase, browser]
 ---
 
-# APEX OS Bad Boy - The Ultimate Agent Collection
+# APEX OS Bad Boy
 
 > "Everything you need. Nothing you don't. Mastery at your fingertips."
 
 ## Overview
 
-The **APEX OS Bad Boy** skill is a comprehensive productivity system that provides:
+APEX OS Bad Boy is a comprehensive productivity system for AI agents that provides:
+
 - **45+ integrated skills** across all domains
-- **Intelligent skill recommendations** based on your task (75%+ accuracy)
+- **Intelligent skill recommendations** (75%+ accuracy)
 - **Risk-based planning levels** (SAFE/MID/RISKY)
 - **Systematic workflows** for every situation
 - **Best-in-class practices** from top engineering teams
+
+This skill teaches agents WHEN and HOW to use the right tools at the right time.
 
 ## The Core Philosophy
 

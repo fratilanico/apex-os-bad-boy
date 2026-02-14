@@ -1,4 +1,4 @@
-# APEX OS Bad Boy Skill
+# APEX OS Bad Boy
 
 > "Everything you need. Nothing you don't. Mastery at your fingertips."
 
@@ -14,37 +14,75 @@ npx skills add fratilanico/apex-os-bad-boy
 git clone https://github.com/fratilanico/apex-os-bad-boy.git ~/.agents/skills/apex-os-bad-boy
 ```
 
-## What's Included
+## What Is This?
 
-### 45+ Skills Across 6 Categories
+APEX OS Bad Boy is a comprehensive productivity system for AI agents that teaches:
 
-| Category | Count | Examples |
-|----------|-------|----------|
-| Meta Process | 8 | brainstorming, writing-plans, verification |
-| Frontend | 6 | React, Next.js, UI design, performance |
-| Backend | 3 | Supabase, Docker, Security |
-| Browser | 2 | browser-use, agent-browser |
-| Quality | 2 | TDD, debugging |
-| Specialty | 5 | Git worktrees, code review |
+1. **WHEN** to use each skill (75%+ accuracy recommendation)
+2. **HOW** to structure work based on risk level
+3. **WHY** certain approaches lead to better outcomes
 
-### Core Features
+## Core Features
 
-1. **Risk Level Selector** - Choose SAFE/MID/RISKY mode based on task
-2. **Skill Recommendation Engine** - 75%+ accuracy on skill selection
-3. **Systematic Workflows** - Pre-defined paths for each situation
-4. **Best Practices** - Vercel, Supabase, security standards
+### 1. Risk Level Selector
+
+Choose the right approach for each task:
+
+| Mode | Use For | Workflow |
+|------|---------|----------|
+| **SAFE** | Production, auth, payments | Design → Plan → TDD → Code → Review → Deploy |
+| **MID** | Bug fixes, small features | Quick Plan → Code → Review → Ship |
+| **RISKY** | POCs, experiments | Just Do It → Ship → Fix |
+
+### 2. Skill Recommendation Engine
+
+45+ skills organized by tier:
+
+| Tier | Skills |
+|------|--------|
+| CRITICAL | brainstorming, writing-plans, verification, security |
+| HIGH | TDD, debugging, React, Supabase, subagents |
+| MEDIUM | Docker, animations, UI components, browser |
+| LOW | Documentation, architecture |
+
+### 3. Systematic Workflows
+
+Pre-defined paths for every situation:
+- SAFE MODE: Full process with design, planning, TDD, review
+- MID MODE: Fast iteration with quick checks
+- RISKY MODE: Maximum velocity for experiments
+
+## Skills Included
+
+### Meta Process
+- brainstorming, writing-plans, verification, code review
+- subagent-driven-development, recursive-agent-coordination
+
+### Frontend
+- vercel-react-best-practices, web-design-guidelines
+- shadcn-master, framer-motion-best-practices
+- performance-optimization, nextjs-master
+
+### Backend
+- supabase-expert, docker-best-practices
+- security-best-practices
+
+### Quality
+- tdd-master, systematic-debugging
+
+### Specialty
+- browser-use, agent-browser, c4-documentation
+- using-git-worktrees, finishing-a-development-branch
 
 ## Quick Start
 
 ### 1. Choose Your Risk Level
 
-Before any task, determine:
+Before any task, answer:
 
-| Mode | Use For |
-|------|---------|
-| **SAFE** | Production, auth, payments |
-| **MID** | Bug fixes, small features |
-| **RISKY** | POCs, experiments |
+1. **Impact if breaks?** (Production / Dev / Easy to fix)
+2. **Complexity?** (Multi-component / Single / Simple)
+3. **Understanding?** (New territory / Known / Clear)
 
 ### 2. Follow the Workflow
 
@@ -54,15 +92,17 @@ MID:   quick plan → implement → review → ship
 RISKY: just do it → ship → fix
 ```
 
-### 3. Use the Decision Matrix
+### 3. Always Invoke
 
-See SKILL.md for the complete Task → Skill decision matrix.
+- ✅ brainstorming for new features
+- ✅ verification-before-completion before claiming done
+- ✅ receiving-code-review before merge
 
 ## Documentation
 
-- **SKILL.md** - Complete skill reference
+- **SKILL.md** - Complete skill reference with decision matrix
 - **APEX-OS-MANUAL.md** - End-user manual
-- **AGENTS.md** - Full agent protocol
+- **AGENTS.md** - Full agent protocol (in parent directory)
 
 ## Skills Source
 
@@ -72,10 +112,22 @@ This skill integrates best practices from:
 - Supabase (Database/Auth)
 - browser-use (Automation)
 - OpenCode (Agent coordination)
+- Top open source AI agent frameworks
 
-## License
+## Requirements
 
-Proprietary - APEX OS Team
+- OpenCode, Claude Code, Cursor, Cline, or any SKILL.md-compatible agent
+- Optional: `browser-use` CLI for browser automation
+
+```bash
+# Install browser-use (optional)
+pip3 install "browser-use[cli]"
+```
+
+## Support
+
+- GitHub: https://github.com/fratilanico/apex-os-bad-boy
+- Issues: Open an issue on GitHub
 
 ---
 
