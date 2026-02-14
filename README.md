@@ -7,11 +7,11 @@ The ultimate agent productivity system with 45+ skills, intelligent recommendati
 ## Installation
 
 ```bash
-# For OpenCode (primary platform)
-npx skills add obra/superpowers
+# Install with npx (works with Claude Code, Cursor, Cline, etc.)
+npx skills add fratilanico/apex-os-bad-boy
 
-# Or install locally
-git clone https://github.com/obra/superpowers.git ~/.agents/skills/apex-os-bad-boy
+# Or clone directly
+git clone https://github.com/fratilanico/apex-os-bad-boy.git ~/.agents/skills/apex-os-bad-boy
 ```
 
 ## What's Included
