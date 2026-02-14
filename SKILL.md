@@ -1,8 +1,8 @@
 ---
 name: apex-os-bad-boy
-description: "The ultimate agent productivity system - 45+ skills with intelligent recommendations, risk-based planning levels, and systematic workflows for maximum efficiency."
+description: "The ultimate agent productivity system - 45+ skills with intelligent recommendations, risk-based planning, testing strategy (no credits for tests), and systematic workflows for maximum efficiency."
 tier: FULL
-tags: [productivity, workflow, planning, debugging, testing, react, nextjs, supabase, browser]
+tags: [productivity, workflow, planning, debugging, testing, react, nextjs, supabase, browser, cost-optimization]
 ---
 
 # APEX OS Bad Boy
