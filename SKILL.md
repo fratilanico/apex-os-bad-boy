@@ -1,8 +1,8 @@
 ---
 name: apex-os-bad-boy
-description: "The ultimate agent productivity system - 45+ skills with intelligent recommendations, risk-based planning, testing strategy (no credits for tests), and systematic workflows for maximum efficiency."
+description: "The ultimate agent productivity system - 45+ skills with intelligent recommendations, risk-based planning levels, and systematic workflows for maximum efficiency."
 tier: FULL
-tags: [productivity, workflow, planning, debugging, testing, react, nextjs, supabase, browser, cost-optimization]
+tags: [productivity, workflow, planning, debugging, testing, react, nextjs, supabase, browser]
 ---
 
 # APEX OS Bad Boy
@@ -229,18 +229,48 @@ JUST DO IT → Ship Fast → Fix Fast
 
 ---
 
-## Integration
+## Skills.sh Integration
 
-This skill integrates with:
+### One-Command Setup
 
-- **OpenCode** - Primary platform
-- **browser-use** - Browser automation (`pip3 install browser-use[cli]`)
-- **Skills.sh** - Additional skill discovery
+Install all Vercel agent skills with a single command:
+
+```bash
+npx skills add vercel-labs/agent-skills
+```
+
+This installs 5 premium skills (100+ rules total):
+
+| Skill | Description | Rules |
+|-------|-------------|-------|
+| `react-best-practices` | React/Next.js performance optimization | 40+ rules across 8 categories |
+| `web-design-guidelines` | Accessibility, UX, and web best practices | 100+ rules |
+| `react-native-guidelines` | React Native/Expo performance & patterns | 16 rules |
+| `composition-patterns` | React component composition patterns | Patterns |
+| `vercel-deploy-claimable` | One-command Vercel deployment | CLI |
+
+### Auto-Update Workflow
+
+To check for and install updates:
+
+```bash
+npx skills add vercel-labs/agent-skills --force
+```
+
+**Process:**
+1. Run the command to fetch latest version
+2. Report what will be updated (new skills, changes)
+3. **ASK USER for confirmation before applying**
+4. Execute update only after human approval
+
+### Browse More Skills
+
+Visit https://skills.sh to discover additional skills from the community.
 
 ### Required Skills Location
 
 ```
-~/.agents/skills/           # Domain skills
+~/.agents/skills/           # Domain skills (from skills.sh)
 ~/.config/opencode/skills/  # Meta skills
 ~/.opencode/skills/         # Coordination skills
 ```
@@ -269,9 +299,13 @@ This skill integrates with:
 │  • web-design-guidelines for UI                         │
 │  • systematic-debugging for bugs                        │
 │  • performance-optimization for speed                   │
+├─────────────────────────────────────────────────────────────┤
+│  SKILLS.SH (run these commands)                          │
+│  npx skills add vercel-labs/agent-skills     # Install  │
+│  npx skills add vercel-labs/agent-skills --force  # Update│
 └─────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-*APEX OS Bad Boy v7.0 - "Everything you need. Nothing you don't."*
+*APEX OS Bad Boy v8.0 - "Everything you need. Nothing you don't."*
