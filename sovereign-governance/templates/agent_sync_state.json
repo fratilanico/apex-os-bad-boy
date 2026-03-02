@@ -1,0 +1,25 @@
+{
+  "$schema": "apex-os-agent-sync-v3",
+  "session": {
+    "id": "session-YYYY-MM-DD-001",
+    "started_at": "2026-01-01T00:00:00Z",
+    "mode": "NORMAL"
+  },
+  "orchestrator": {
+    "agent": "unassigned",
+    "status": "STANDBY",
+    "last_heartbeat": "2026-01-01T00:00:00Z"
+  },
+  "current_mission": {
+    "name": "No active mission",
+    "priority": "P3",
+    "target": "",
+    "deadline": null,
+    "progress_pct": 0
+  },
+  "agents": {},
+  "file_locks": {},
+  "phases": {},
+  "last_updated": "2026-01-01T00:00:00Z",
+  "next_action": "Assign mission"
+}

@@ -1,0 +1,65 @@
+#!/bin/bash
+# ═══════════════════════════════════════════════════════════════════════════
+# SOVEREIGN GOVERNANCE — Git Pre-Commit Hook
+#
+# Blocks commits in any repository where AGENTS.md is stale (not a pointer).
+# Install globally: git config --global core.hooksPath ~/.config/git/hooks
+#
+# Configuration (environment variables):
+#   SOVEREIGN_CANONICAL    Path to canonical AGENTS.md
+#   SOVEREIGN_MAX_LINES    Max lines for valid pointer (default: 50)
+#
+# If SOVEREIGN_CANONICAL is not set, falls back to:
+#   $HOME/governance/AGENTS.md
+#
+# ═══════════════════════════════════════════════════════════════════════════
+
+CANONICAL="${SOVEREIGN_CANONICAL:-$HOME/governance/AGENTS.md}"
+MAX_LINES="${SOVEREIGN_MAX_LINES:-50}"
+CANONICAL_LOCATION=$(basename "$(dirname "$CANONICAL")")
+
+# Find repo root
+REPO_ROOT=$(git rev-parse --show-toplevel 2>/dev/null)
+AGENTS_FILE="$REPO_ROOT/AGENTS.md"
+
+# Skip if no AGENTS.md in this repo
+if [ ! -f "$AGENTS_FILE" ]; then
+    exit 0
+fi
+
+# Skip if this IS the canonical file
+if [ "$AGENTS_FILE" = "$CANONICAL" ]; then
+    exit 0
+fi
+
+# Skip if canonical doesn't exist (skill not configured yet)
+if [ ! -f "$CANONICAL" ]; then
+    exit 0
+fi
+
+# Check: is it a valid pointer?
+lines=$(wc -l < "$AGENTS_FILE" | tr -d ' ')
+
+if [ "$lines" -ge "$MAX_LINES" ] || ! grep -q "POINTER FILE" "$AGENTS_FILE" 2>/dev/null || ! grep -q "$CANONICAL_LOCATION" "$AGENTS_FILE" 2>/dev/null; then
+    echo ""
+    echo "╔══════════════════════════════════════════════════════════╗"
+    echo "║  GOVERNANCE VIOLATION — COMMIT BLOCKED                   ║"
+    echo "╚══════════════════════════════════════════════════════════╝"
+    echo ""
+    echo "  AGENTS.md in this repo is NOT a valid pointer."
+    echo ""
+    echo "  Found:    $lines lines"
+    echo "  Expected: < $MAX_LINES lines with 'POINTER FILE' header"
+    echo "  Canonical: $CANONICAL"
+    echo ""
+    echo "  To fix:"
+    echo "    Run: enforce-fix"
+    echo "    Or:  \$SOVEREIGN_CANONICAL/../enforce.sh --fix"
+    echo ""
+    echo "  To bypass (not recommended):"
+    echo "    git commit --no-verify"
+    echo ""
+    exit 1
+fi
+
+exit 0
